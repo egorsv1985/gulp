@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "dev": "gulp watch",
-    "build:dev": "gulp build",
-    "build:prod": "gulp build --prod"
+    "dev": "gulp --dev",
+    "docs": "gulp --docs"
   },
   "lint-staged": {
     "*.js": "eslint"
@@ -22,10 +21,12 @@
     "@babel/eslint-parser": "^7.23.3",
     "@babel/preset-env": "^7.23.3",
     "@babel/register": "^7.22.15",
+    "del": "^7.1.0",
     "eslint": "^8.53.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.29.0",
     "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
     "husky": "^8.0.3",
     "lint-staged": "^15.0.2"
   }

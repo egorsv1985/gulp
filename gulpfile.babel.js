@@ -1,8 +1,7 @@
-import config from "./gulp/config";
+import gulp from "gulp";
+import clean from "./gulp/tasks/clean";
+import config from "./gulp/settings/config";
+
 config.setEnv();
-export const build = () => {
-  console.log(config.isProd);
-};
-export const watch = () => {
-  console.log(config.isProd);
-};
+export const build = gulp.series(clean);
+export const watch = gulp.series(build);
